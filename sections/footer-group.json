@@ -9,14 +9,14 @@
           "type": "link_list",
           "settings": {
             "heading": "Birinit",
-            "menu": "footer"
+            "menu": "footer-birinit-menu"
           }
         },
         "footer-1": {
           "type": "link_list",
           "settings": {
             "heading": "Help",
-            "menu": "footer"
+            "menu": "footer-help-menu"
           }
         }
       },
