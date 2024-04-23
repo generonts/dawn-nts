@@ -165,7 +165,7 @@
           "type": "column",
           "settings": {
             "title": "Free shipping",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>from 80€ in the Península and 200€ in the rest of the world<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -183,7 +183,7 @@
           "type": "column",
           "settings": {
             "title": "Surprise gift",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>with orders over 200€<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -191,8 +191,8 @@
         "column3": {
           "type": "column",
           "settings": {
-            "title": "Finance your purchase with",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "",
+            "text": "<p>Finance your purchase with<\/p>",
             "link_label": "",
             "link": ""
           }
