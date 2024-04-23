@@ -132,6 +132,37 @@
                         {%- render 'social-icons', class: 'footer__list-social' -%}
                       {%- endif -%}
                     </div>
+                  {%- when 'nts_information' -%}
+                    <div class="footer-block__brand-info">
+                      {%- if settings.nts_image != blank -%}
+                        {%- assign nts_image_height = settings.nts_image_width
+                          | divided_by: settings.nts_image.aspect_ratio
+                        -%}
+                        <div
+                          class="footer-block__image-wrapper"
+                          style="max-width: min(100%, {{ settings.nts_image_width }}px);"
+                        >
+                          {{
+                            settings.nts_image
+                            | image_url: width: 1100
+                            | image_tag:
+                              loading: 'lazy',
+                              widths: '50, 100, 150, 200, 300, 400, 550, 800, 1100',
+                              height: nts_image_height,
+                              width: settings.nts_image_width
+                          }}
+                        </div>
+                      {%- endif -%}
+                      {%- if settings.nts_headline != blank -%}
+                        <h2 class="footer-block__heading rte">{{ settings.nts_headline }}</h2>
+                      {%- endif -%}
+                      {%- if settings.nts_description != blank -%}
+                        <div class="rte">{{ settings.nts_description }}</div>
+                      {%- endif -%}
+                      {%- if block.settings.show_social and has_social_icons -%}
+                        {%- render 'social-icons', class: 'footer__list-social' -%}
+                      {%- endif -%}
+                    </div>
                   {%- when 'image' -%}
                     <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
                       {%- if block.settings.image != blank -%}
@@ -362,6 +393,27 @@
           "default": true,
           "label": "t:sections.footer.blocks.brand_information.settings.show_social.label",
           "info": "t:sections.footer.blocks.brand_information.settings.show_social.info"
+        }
+      ]
+    },
+    {
+      "type": "nts_information",
+      "name": "t:sections.footer.blocks.nts_information.name",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "t:sections.footer.blocks.nts_information.settings.paragraph.content"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.footer.blocks.nts_information.settings.header__1.content"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_social",
+          "default": true,
+          "label": "t:sections.footer.blocks.nts_information.settings.show_social.label",
+          "info": "t:sections.footer.blocks.nts_information.settings.show_social.info"
         }
       ]
     },
