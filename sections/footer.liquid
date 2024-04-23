@@ -278,6 +278,7 @@
     {%- endunless -%}
   {%- endif -%}
 
+  {% if section.settings.show_footer_content_bottom %}
   <div
     class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
@@ -347,6 +348,7 @@
       </div>
     </div>
   </div>
+  {%- endif -%}
 </footer>
 
 {% schema %}
@@ -478,6 +480,13 @@
     }
   ],
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_footer_content_bottom",
+      "default": false,
+      "label": "mostrar cierre de pie",
+      "info": "info"
+    },
     {
       "type": "color_scheme",
       "id": "color_scheme",
