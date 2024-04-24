@@ -436,6 +436,7 @@
 }
 
 .card .icon-wrap {
+  display: inline-block;
   margin-left: 0.8rem;
   white-space: nowrap;
   transition: transform var(--duration-short) ease;
