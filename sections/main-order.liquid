@@ -21,13 +21,13 @@
     </symbol>
   </svg>
   <div>
-    <h1 class="customer__title">{{ 'customer.account.title' | t }}</h1>
+    <h1 class="h1 customer__title">{{ 'customer.account.title' | t }}</h1>
     <a href="{{ routes.account_url }}">{{ 'customer.account.return' | t }}</a>
   </div>
 
   <div>
     <div>
-      <h2>{{ 'customer.order.title' | t: name: order.name }}</h2>
+      <h2 class="h2">{{ 'customer.order.title' | t: name: order.name }}</h2>
       {%- assign order_date = order.created_at | time_tag: format: 'date_at_time' -%}
       <p>{{ 'customer.order.date_html' | t: date: order_date }}</p>
       {%- if order.cancelled -%}
@@ -325,7 +325,7 @@
     </div>
     <div>
       <div>
-        <h2>{{ 'customer.order.billing_address' | t }}</h2>
+        <h2 class="h2">{{ 'customer.order.billing_address' | t }}</h2>
         <p>
           <strong>{{ 'customer.order.payment_status' | t }}:</strong>
           {{ order.financial_status_label }}
@@ -333,7 +333,7 @@
         {{ order.billing_address | format_address }}
       </div>
       <div>
-        <h2>{{ 'customer.order.shipping_address' | t }}</h2>
+        <h2 class="h2">{{ 'customer.order.shipping_address' | t }}</h2>
         <p>
           <strong>{{ 'customer.order.fulfillment_status' | t }}:</strong>
           {{ order.fulfillment_status_label }}

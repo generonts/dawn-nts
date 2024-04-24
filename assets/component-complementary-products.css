@@ -38,12 +38,10 @@ product-recommendations:not(.is-accordion) .complementary-products__container {
   .complementary-slide > ul {
     gap: var(--grid-desktop-vertical-spacing);
   }
-
   .complementary-slide.complementary-slide--standard > ul {
     gap: calc(var(--grid-desktop-vertical-spacing) + 8px);
   }
 }
-
 .complementary-slide.grid__item {
   width: 100%;
   padding-top: max(var(--focus-outline-padding), var(--shadow-padding-top));
@@ -89,7 +87,6 @@ product-recommendations.is-accordion + .accordion {
     max-width: 25%;
   }
 }
-
 .complementary-slide .card--text .card__content {
   grid-template-rows: minmax(0, 1fr) max-content auto;
 }

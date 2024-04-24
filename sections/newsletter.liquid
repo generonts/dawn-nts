@@ -23,7 +23,7 @@
           {% render block %}
         {%- when 'heading' -%}
           <h2
-            class="inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            class="h2 inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {{ block.shopify_attributes }}
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
@@ -98,7 +98,7 @@
               </div>
               {%- if form.posted_successfully? -%}
                 <h3
-                  class="newsletter-form__message newsletter-form__message--success form__message"
+                  class="h3 newsletter-form__message newsletter-form__message--success form__message"
                   id="Newsletter-success--{{ section.id }}"
                   tabindex="-1"
                   autofocus

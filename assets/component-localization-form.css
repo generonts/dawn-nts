@@ -23,23 +23,19 @@
   .localization-form {
     padding: 1rem 2rem 1rem 0;
   }
-
   .localization-form:first-of-type {
     padding-left: 0;
   }
-
   .localization-form:only-child {
     justify-content: start;
     width: auto;
     margin: 0 1rem 0 0;
   }
-
   .localization-form:only-child .button,
   .localization-form:only-child .localization-form__select {
     margin: 1rem 0;
   }
 }
-
 .localization-form .button {
   padding: 1rem;
 }
@@ -55,12 +51,10 @@
   .localization-form .button {
     word-break: break-all;
   }
-
   .localization-form__currency {
     opacity: 1;
   }
 }
-
 .localization-form__select {
   border-radius: var(--inputs-radius-outset);
   position: relative;
@@ -78,7 +72,7 @@
 
 .localization-form__select .icon-caret {
   position: absolute;
-  content: '';
+  content: "";
   height: 0.6rem;
   right: calc(var(--inputs-border-width) + 1.5rem);
   top: calc(50% - 0.2rem);
@@ -133,8 +127,7 @@
   z-index: 2;
   background-color: rgb(var(--color-background));
   border-radius: var(--popup-corner-radius);
-  box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)
-    rgba(var(--color-shadow), var(--popup-shadow-opacity));
+  box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(var(--color-shadow), var(--popup-shadow-opacity));
   max-height: 27.5rem;
 }
 
@@ -186,7 +179,7 @@
 .country-filter__reset-button:not(:focus)::after {
   display: block;
   height: calc(100% - 1.8rem);
-  content: '';
+  content: "";
   position: absolute;
   right: 0;
 }
@@ -230,7 +223,6 @@
   .disclosure__list-wrapper.country-selector:not([hidden]) + .country-selector__overlay:empty {
     display: block;
   }
-
   .country-selector__overlay {
     position: fixed;
     top: 0;
@@ -241,7 +233,6 @@
     z-index: 3;
     animation: animateLocalization var(--duration-default) ease;
   }
-
   .disclosure__list-wrapper.country-selector {
     position: fixed;
     bottom: -1rem;
@@ -254,14 +245,12 @@
     box-shadow: none;
     z-index: 4;
   }
-
   .disclosure__list.country-selector__list {
     max-height: 85%;
     min-width: 100%;
     margin-bottom: 0;
     z-index: 5;
   }
-
   .country-selector__close-button.link {
     display: flex;
     justify-content: center;
@@ -271,23 +260,19 @@
     height: 4.4rem;
     width: 4.4rem;
   }
-
   .country-selector__close-button .icon {
     width: 2rem;
     height: 2rem;
   }
-
   .country-filter {
     padding: 1.5rem 2rem 0.6rem 1.5rem;
   }
 }
-
 @media screen and (min-width: 750px) {
   .country-filter--no-padding {
     padding: 0;
   }
 }
-
 .countries {
   padding-top: 0.6rem;
 }
@@ -329,7 +314,7 @@
   opacity: 1;
 }
 
-.disclosure__button[aria-expanded='true'] .icon-caret {
+.disclosure__button[aria-expanded=true] .icon-caret {
   transform: rotate(180deg);
 }
 
@@ -419,7 +404,6 @@
     display: none;
   }
 }
-
 .menu-drawer__localization localization-form {
   display: block;
 }

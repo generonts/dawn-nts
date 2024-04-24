@@ -1,14 +1,21 @@
 {
   "private": true,
   "scripts": {
-    "build": "vite build --minify",
-    "watch": "vite build --watch"
+    "dev": "npm run tw:dev & npm run gulp:dev",
+    "build": "npm run tw:build && npm run gulp:build",
+    "gulp:build": "gulp build",
+    "gulp:dev": "gulp watch",
+    "tw:build": "vite build --minify",
+    "tw:dev": "vite build --watch"
   },
   "devDependencies": {
     "@shopify/cli": "latest",
     "@shopify/theme": "latest",
     "autoprefixer": "^10.4.14",
+    "gulp": "^5.0.0",
+    "gulp-sass": "^5.1.0",
     "postcss": "^8.4.25",
+    "sass": "^1.75.0",
     "tailwindcss": "^3.3.2",
     "vite": "^4.4.2"
   }
