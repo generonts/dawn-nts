@@ -1,18 +1,31 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
+'use strict';
 
-gulp.task('dev', function () {
-  return gulp.src('styles/*.scss')
-    .pipe(sass())
-    .pipe(gulp.dest('assets'))
-});
+const { src, dest, series, parallel, watch } = require('gulp');
 
-gulp.task('build', function () {
-  return gulp.src('styles/*.scss')
+const
+  sass = require('gulp-sass')(require('sass')),
+  uglify = require('gulp-uglify');
+
+const
+  scssPath = 'assets-dev/scss/**/*.scss',
+  jsPath = 'assets-dev/js/**/*.js';
+
+const cssTask = function () {
+  return src(scssPath)
     .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(gulp.dest('assets'))
-});
+    .pipe(dest('assets'));
+};
 
-gulp.task('watch', function () {
-  gulp.watch('styles/**/*.scss', gulp.series('dev'));
-})
+const jsTask = function () {
+  return src(jsPath)
+    .pipe(uglify())
+    .pipe(dest('assets'));
+};
+
+const watchTask = function () {
+  watch(scssPath, series(cssTask));
+  watch(jsPath, series(jsTask));
+}
+
+exports.watch = series(parallel(cssTask, jsTask), watchTask);
+exports.build = parallel(cssTask, jsTask);

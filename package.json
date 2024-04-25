@@ -14,6 +14,7 @@
     "autoprefixer": "^10.4.14",
     "gulp": "^5.0.0",
     "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
     "postcss": "^8.4.25",
     "sass": "^1.75.0",
     "tailwindcss": "^3.3.2",

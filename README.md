@@ -1,4 +1,15 @@
-# Dawn
+## Instalación y comandos
+* `npm install` — Instalación dependencias.
+* `npm run dev` — Generador hoja de estilos TailwindCSS con Vite, compilación SCSS y JS y tarea watch.
+* `npm run build` — Generador hoja de estilos TailwindCSS con Vite, compilación SCSS y JS.
+
+### Environment versions
+####  25/04/24:
+* Node version: 21.7.1
+* NPM version: 10.5.0
+
+
+# NITSNETS Dawn
 
 [![Build status](https://github.com/shopify/dawn/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Shopify/dawn/actions/workflows/ci.yml?query=branch%3Amain)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=informational)](/.github/CONTRIBUTING.md)

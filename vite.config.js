@@ -9,7 +9,7 @@ export default defineConfig({
       input: 'tailwind.css',
       output: {
         dir: 'assets',
-        assetFileNames: 'styles.css',
+        assetFileNames: 'tw-styles.css',
       }
     },
   }
